@@ -3,7 +3,20 @@ permalink: /
 author_profile: true
 title: "BrainGlobe"
 ---
-The core goal of BrainGlobe is to develop a suite of Python-based software tools for computational neuroanatomy. We developed several software packages to access, analyze and visualize anatomical data, by ensuring the interoperability of all of BrainGlobe's software we aim to facilitate the development of analysis pipelines and facilitate the process of going from raw data to publication-ready content. By producing a set of high-quality open-access Python packages we aim to accelerate the development of sophisticated analysis tools in python.
 
+
+The BrainGlobe Initative exists to facilitate the development of interoperable 
+Python-based tools for computational neuroanatomy. 
+
+We have three aims:
+* Develop specialist software for specific analysis and visualisation needs, 
+  such as [cellfinder](https://brainglobe.info/cellfinder) and 
+  [brainrender](https://docs.brainrender.info/).
+  
+* Develop core tools to facilitate others to build interoperable tools in Python, e.g. the
+  [BrainGlobe Atlas API](https://brainglobe.info/atlas-api)
+
+* Build a community of neuroscientists and developers to share knowledge, build software and engage
+with the scientific, and open-source community (e.g. by organising hackathons.)
 
 

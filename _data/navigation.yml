@@ -8,6 +8,8 @@ main:
 #    url: /news
   - title: "publications"
     url: /publications
+  - title: "atlas API"
+    url: /atlas-api
   - title: "cellfinder"
     url: /cellfinder
   - title: "brainrender"
