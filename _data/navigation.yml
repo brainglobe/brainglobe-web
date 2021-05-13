@@ -1,0 +1,17 @@
+# main links links
+main:
+  - title: "about"
+    url: /about
+#  - title: "applications"
+#    url: /applications
+#  - title: "news"
+#    url: /news
+#  - title: "citation"
+#    url: /citation
+  - title: "GitHub"
+    url: https://github.com/brainglobe
+  - title: "documentation"
+    url: https://docs.brainglobe.info/
+  - title: "help forum"
+    url: https://forum.image.sc/tag/brainglobe
+
