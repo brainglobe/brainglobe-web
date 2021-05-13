@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "BrainGlobe"
   avatar           : "brainglobe.png"
-  bio              : "Whole-brain image analysis software"
+  bio              : "Computational neuroanatomy in Python"
   github           : "brainglobe"
   twitter          : "brain_globe"
   location         :

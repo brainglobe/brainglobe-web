@@ -8,7 +8,7 @@ main:
 #    url: /news
 #  - title: "citation"
 #    url: /citation
-  - title: "GitHub"
+  - title: "code"
     url: https://github.com/brainglobe
   - title: "documentation"
     url: https://docs.brainglobe.info/
