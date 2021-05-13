@@ -20,3 +20,4 @@ We have three aims:
 with the scientific, and open-source community (e.g. by organising hackathons.)
 
 
+<img src='https://brainglobe.info/images/cellfinder_brainrender.png' width="800">
