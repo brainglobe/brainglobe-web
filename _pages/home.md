@@ -14,10 +14,10 @@ We have three aims:
   [brainrender](https://docs.brainrender.info/).
   
 * Develop core tools to facilitate others to build interoperable tools in Python, e.g. the
-  [BrainGlobe Atlas API](https://brainglobe.info/atlas-api)
+  [BrainGlobe Atlas API](https://brainglobe.info/atlas-api).
 
 * Build a community of neuroscientists and developers to share knowledge, build software and engage
-with the scientific, and open-source community (e.g. by organising hackathons.)
+with the scientific, and open-source community (e.g. by organising hackathons).
 
 
 <img src='https://brainglobe.info/images/cellfinder_brainrender.png' width="800">

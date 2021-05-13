@@ -4,8 +4,8 @@ author_profile: true
 title: "BrainGlobe Atlas API"
 ---
 
-### A lightweight python module to interact with atlases for systems neuroscience
-
+### *A lightweight python module to interact with atlases for systems neuroscience*
+## [GitHub](https://github.com/brainglobe/bg-atlasapi)
 
 Many excellent brain atlases exist for different species. Some of them have an API (application programming interface) to allow users to interact with the data programmatically (e.g. the excellent [Allen Mouse Brain Atlas](www.brain-map.org)), but many do not, and there is no consistent way to process data from multiple sources.
 
@@ -32,7 +32,5 @@ A number of atlases are in development, but those available currently are:
 
 BG-AtlasAPI works with Python &gt;3.6, and can be installed from PyPI with:
 
-```bash
-pip install bg-atlasapi
-```
+`pip install bg-atlasapi`
 

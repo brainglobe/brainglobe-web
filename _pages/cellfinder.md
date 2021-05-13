@@ -3,6 +3,9 @@ permalink: /cellfinder
 author_profile: true
 title: "cellfinder"
 ---
+### *Automated 3D cell detection and registration of whole-brain images *
+## [GitHub](https://github.com/brainglobe/cellfinder)
+
 cellfinder is software from the [Margrie Lab](https://www.sainsburywellcome.org/web/groups/margrie-lab) at the
 [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/web/), [UCL](https://www.ucl.ac.uk/) for automated 3D cell detection and registration
 of whole-brain images (e.g. serial two-photon or lightsheet imaging).
