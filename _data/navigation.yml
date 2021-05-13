@@ -6,8 +6,8 @@ main:
 #    url: /applications
 #  - title: "news"
 #    url: /news
-#  - title: "citation"
-#    url: /citation
+  - title: "publications"
+    url: /publications
   - title: "code"
     url: https://github.com/brainglobe
   - title: "documentation"
