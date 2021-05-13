@@ -6,6 +6,10 @@ main:
 #    url: /applications
 #  - title: "news"
 #    url: /news
+  - title: "cellfinder"
+    url: /cellfinder
+  - title: "brainrender"
+    url: https://docs.brainrender.info
   - title: "publications"
     url: /publications
   - title: "code"
