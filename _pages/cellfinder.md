@@ -10,7 +10,7 @@ cellfinder is software from the [Margrie Lab](https://www.sainsburywellcome.org/
 [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/web/), [UCL](https://www.ucl.ac.uk/) for automated 3D cell detection and registration
 of whole-brain images (e.g. serial two-photon or lightsheet imaging).
 
-<img src='https://cellfinder.info/images/cells.png' width="800">
+<img src='https://brainglobe.info/images/cells.png' width="800">
 
 cellfinder can:
 * Detect labelled cells in 3D in whole-brain images (many hundreds of GB)
