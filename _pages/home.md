@@ -5,7 +5,7 @@ title: "BrainGlobe"
 ---
 
 
-The BrainGlobe Initative exists to facilitate the development of interoperable 
+The BrainGlobe Initiative exists to facilitate the development of interoperable 
 Python-based tools for computational neuroanatomy. 
 
 We have three aims:
