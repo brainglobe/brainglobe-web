@@ -3,9 +3,12 @@ permalink: /publications
 author_profile: true
 title: "BrainGlobe publications"
 ---
-
 3D cell detection:
 > Tyson, A. L., Rousseau, C. V., Niedworok, C. J., Keshavarzi, S., Tsitoura, C., Cossell, L., Strom, M. and Margrie, T. W. (In press) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" PLOS Computational Biology, [doi.org/10.1101/2020.10.21.348771](https://doi.org/10.1101/2020.10.21.348771)
+
+
+Brainreg & brainreg-segment:
+> Tyson, A. L., V&eacute;lez-Fort, M.,  Rousseau, C. V., Cossell, L., Tsitoura, C., Obenhaus, H. A., Claudi, F., Lenzi, S. C., Branco, T.,  Margrie, T. W. (2021) “A deep learning algorithm for 3D cell detection in whole mouse brain image datasets" bioRxiv, [doi.org/10.1101/2021.05.21.445133](https://doi.org/10.1101/2021.05.21.445133)
 
 
 Brainrender:
