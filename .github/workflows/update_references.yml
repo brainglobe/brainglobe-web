@@ -22,4 +22,4 @@ jobs:
           pip install loguru scholarly rich mdutils myterial
       - name: update references.md
         run: |
-          python scraper.py
+          python ./scripts/scraper.py
