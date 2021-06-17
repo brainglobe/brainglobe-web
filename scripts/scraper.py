@@ -52,7 +52,6 @@ def make_citations_markdown(citations):
     # create markdown file
     mdFile = MdUtils(file_name='_pages/references.md')
     
-
     # add metadata & header
     mdFile.write(text="""
 ---
@@ -93,7 +92,15 @@ _Sainsbury Wellcome Centre Blog, April 2020_
 
 _NeuroWire (Scientifica), April 2020_
     """)
+
+    # save
     mdFile.create_md_file()
+
+    # remove extra empty lines at top of file
+    with open('_pages/references.md', 'r') as fin:
+        content = fin.read()
+    with open('_pages/references.md', 'w') as fout:
+        fout.write(content.replace('\n\n\n\n', ''))
 
 if __name__ == '__main__':
     citations = fetch_citations()
