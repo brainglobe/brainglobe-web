@@ -1,7 +1,3 @@
-
-
-
-
 ---
 permalink: /references
 author_profile: true
