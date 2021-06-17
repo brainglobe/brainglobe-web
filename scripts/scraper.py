@@ -3,9 +3,6 @@ from scholarly import scholarly
 from rich import print
 from rich.table import Table
 from mdutils.mdutils import MdUtils
-
-
-
 from myterial import pink, blue_light
 
 '''
