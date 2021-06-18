@@ -60,7 +60,7 @@ author_profile: true
 title: "References"
 ---
     """)
-    mdFile.new_header(level=1, title='Papers citing cellfinder ')
+    mdFile.new_header(level=1, title='Papers citing BrainGlobe tools ')
     
     years = sorted(set([paper['bib']['pub_year'] for paper in citations]))
     for year in years:
@@ -81,8 +81,18 @@ title: "References"
 
     # add 'in the press'
     mdFile.write("""
-# cellfinder reported in press/online
+# BrainGlobe reported in press/online
+### [Why These Python Coders are Joining the napari Community](https://cziscience.medium.com/why-these-python-coders-are-joining-the-napari-community-c0af6bb6ee3a)
 
+_Chan Zuckerberg Science Initiative (Medium), June 2021_
+
+### [Using deep learning to aid 3D cell detection in whole brain microscopy images](https://www.sainsburywellcome.org/web/blog/using-deep-learning-aid-3d-cell-detection-whole-brain-microscopy-images)
+
+_Sainsbury Wellcome Centre Blog, June 2021_
+
+### [Brainrender: visualising brain data in 3D](https://www.sainsburywellcome.org/web/blog/brainrender-visualising-brain-data-3d)
+
+_Sainsbury Wellcome Centre Blog, March 2021_
 
 ### [Cellfinder: Harnessing the power of deep learning to map the brain](https://www.sainsburywellcome.org/web/blog/cellfinder-harnessing-power-deep-learning-map-brain)
 
