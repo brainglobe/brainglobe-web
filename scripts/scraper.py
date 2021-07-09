@@ -60,6 +60,8 @@ def fetch_citations():
 
             # add it to the list of brainglobe papers
             if matched_keywords:
+                if paper['corpusId'] in brainglobe_papers['id']:
+                    continue  # skip duplicates
                 brainglobe_papers['id'].append(paper['corpusId'])
                 brainglobe_papers['year'].append(str(paper['year']))
                 brainglobe_papers['authors'].append([auth['name'] for auth in paper['authors']])
@@ -174,5 +176,5 @@ _NeuroWire (Scientifica), April 2020_
 
 if __name__ == '__main__':
     citations = fetch_citations()
-    print_citations(citations)
+    # print_citations(citations)
     make_citations_markdown(citations)
