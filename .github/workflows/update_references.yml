@@ -1,6 +1,11 @@
 name: Update references
 
-on: [push]
+# on: [push]
+on:
+  schedule:
+  - cron: "0 8 * * 1"
+  # - cron: "0 8 * * 1" # Every Monday at 9AM UK time (8 AM UTC)
+
 
 jobs:
   build:
