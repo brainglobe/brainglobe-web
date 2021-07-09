@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install loguru scholarly rich mdutils myterial
+          pip install loguru semanticscholar rich mdutils myterial
       - name: update references.md
         run: |
           python ./scripts/scraper.py
