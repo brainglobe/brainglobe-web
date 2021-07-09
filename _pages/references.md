@@ -14,6 +14,8 @@ title: "References"
 
 ### [A multimodal cell census and atlas of the mammalian primary motor cortex](https://www.semanticscholar.org/paper/e0def1612c5ed40196a933193c7474ddbc1ffa3a)
 
+### [Brainrender: a python-based software for visualizing anatomically registered data](https://www.semanticscholar.org/paper/bccd63c1f2ff9179e820bbc55dcff049517a8951)
+
 ## 2021
 
 ### [Mesoscale microscopy for micromammals: Image analysis tools for understanding the rodent brain.](https://www.semanticscholar.org/paper/7538196660bebfbdb9ca5133e68f01e135da42ce)
@@ -27,6 +29,8 @@ title: "References"
 ### [Tools for accurate post hoc determination of marker location within whole-brain microscopy images](https://www.semanticscholar.org/paper/d6946845f1dcd0a53a6e47d5299930dfed0a6dde)
 
 ### [Constructing An Adult Orofacial Premotor Atlas In Allen Mouse CCF](https://www.semanticscholar.org/paper/e5085fa0a999abcd40daf5afa36e2bbc70e6a362)
+
+### [Visualizing anatomically registered data with brainrender](https://www.semanticscholar.org/paper/35431775f22fa9410c9f3541b9588394d646e5a4)
 
 # BrainGlobe reported in press/online
 ### [Why These Python Coders are Joining the napari Community](https://cziscience.medium.com/why-these-python-coders-are-joining-the-napari-community-c0af6bb6ee3a)

@@ -56,7 +56,7 @@ def fetch_citations():
             if not paper or paper['abstract'] is None:
                 continue
 
-            matched_keywords = [kw for kw in KEYWORDS if kw in paper['abstract']]
+            matched_keywords = [kw for kw in KEYWORDS if kw in paper['abstract'].lower()]
 
             # add it to the list of brainglobe papers
             if matched_keywords:
