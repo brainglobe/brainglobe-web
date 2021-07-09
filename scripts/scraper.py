@@ -44,8 +44,10 @@ def fetch_citations():
     # loop over authors
     logger.info('Getting brainglobe papers')
     for author_n, author_id in enumerate(AUTHORS):
+        added = 0
         logger.debug(f'Fetching for author {author_n+1}/{len(AUTHORS)}')
         author = sch.author(author_id)
+        logger.debug(f'Found {len(author["papers"])} papers for {author["name"]}')
 
         if not len(author.keys()):
             raise ValueError('Could not fetch author data, probably an API timeout error, wait a bit.')
@@ -54,6 +56,7 @@ def fetch_citations():
         for paper in author['papers']:
             paper = sch.paper(paper['paperId'])
             if not paper or paper['abstract'] is None:
+                logger.debug(f'     skipping paper {paper["title"]} because it has not abstract')
                 continue
 
             matched_keywords = [kw for kw in KEYWORDS if kw in paper['abstract'].lower()]
@@ -61,7 +64,10 @@ def fetch_citations():
             # add it to the list of brainglobe papers
             if matched_keywords:
                 if paper['corpusId'] in brainglobe_papers['id']:
+                    logger.debug(f'  skipping paper: {paper["title"]} to avoid duplicates')
                     continue  # skip duplicates
+                logger.debug(f'Found brainglobe paper: "{paper["title"]}" @ "{paper["venue"]}" with |{paper["numCitedBy"]}| citations')
+
                 brainglobe_papers['id'].append(paper['corpusId'])
                 brainglobe_papers['year'].append(str(paper['year']))
                 brainglobe_papers['authors'].append([auth['name'] for auth in paper['authors']])
@@ -69,6 +75,11 @@ def fetch_citations():
                 brainglobe_papers['link'].append(paper['url'])
 
                 citations.append(paper['citations'])
+                added += 1
+            else:
+                logger.debug(f'Paper NOT belonging to brainglobe: "{paper["title"]}" @ "{paper["venue"]}" with |{paper["numCitedBy"]}| citations')
+        logger.debug(f'Added {added}/{len(author["papers"])} papers for {author["name"]}')
+
     logger.info(f'Found {len(brainglobe_papers["id"])} brainglobe papers')
     logger.info('Getting papers citing our work')
 
@@ -76,6 +87,7 @@ def fetch_citations():
         for paper in paper_citations:
             if paper['paperId'] in citing_brainglobe['id']:
                 continue  # avoid duplicates
+
             citing_brainglobe['id'].append(paper['paperId'])
             citing_brainglobe['year'].append(str(paper['year']))
             citing_brainglobe['title'].append(paper['title'])
@@ -143,6 +155,10 @@ title: "References"
 
     # add 'in the press'
     mdFile.write("""
+
+
+
+    
 # BrainGlobe reported in press/online
 ### [Why These Python Coders are Joining the napari Community](https://cziscience.medium.com/why-these-python-coders-are-joining-the-napari-community-c0af6bb6ee3a)
 

@@ -31,7 +31,7 @@ title: "References"
 ### [Constructing An Adult Orofacial Premotor Atlas In Allen Mouse CCF](https://www.semanticscholar.org/paper/e5085fa0a999abcd40daf5afa36e2bbc70e6a362)
 
 ### [Visualizing anatomically registered data with brainrender](https://www.semanticscholar.org/paper/35431775f22fa9410c9f3541b9588394d646e5a4)
-
+    
 # BrainGlobe reported in press/online
 ### [Why These Python Coders are Joining the napari Community](https://cziscience.medium.com/why-these-python-coders-are-joining-the-napari-community-c0af6bb6ee3a)
 
