@@ -1,9 +1,9 @@
 from loguru import logger
-from scholarly import scholarly
 from rich import print
 from rich.table import Table
 from mdutils.mdutils import MdUtils
 
+import semanticscholar as sch
 
 
 from myterial import pink, blue_light
@@ -12,16 +12,77 @@ from myterial import pink, blue_light
     Searches google scholar for papers using brainglobe's tools
 '''
 
+AUTHORS = (
+    '34308754', # Federico Claudi
+    '3853277', # Adam L. Tyson
+    '8668066', # Luigi petrucco
+)
+KEYWORDS = ('brainglobe', 'brainrender', 'cellfinder', 'brainreg')
+
 def fetch_citations():
     '''
-        Fetches citations from Google Scholar to identify papers using/citing
-        brainglobe's tools
+        Fetches citations semantic scholar, for each author in the list
+        get all publications and only keep the ones relevant for brainglobe.
+        Then, use these publications to find papers citing them
     '''
-    QUERY = '"brainglobe"'
-    logger.debug(f'Searching for citations with query string: {QUERY}')
-    citations = list(scholarly.search_pubs(QUERY, year_low=2018, sort_by='relevance'))
-    logger.debug(f'Found {len(citations)} publications with query: {QUERY}')
-    return citations
+    citations = []
+    brainglobe_papers =  dict(
+        id = [],
+        year = [],
+        title = [],
+        authors = [],
+        link=[],
+    )
+    citing_brainglobe =  dict(
+        id = [],
+        year = [],
+        title = [],
+        authors = [],
+        link=[],
+    )
+
+    # loop over authors
+    logger.info('Getting brainglobe papers')
+    for author_n, author_id in enumerate(AUTHORS):
+        logger.debug(f'Fetching for author {author_n+1}/{len(AUTHORS)}')
+        author = sch.author(author_id)
+
+        if not len(author.keys()):
+            raise ValueError('Could not fetch author data, probably an API timeout error, wait a bit.')
+
+        # loop over papers
+        for paper in author['papers']:
+            paper = sch.paper(paper['paperId'])
+            if not paper or paper['abstract'] is None:
+                continue
+
+            matched_keywords = [kw for kw in KEYWORDS if kw in paper['abstract']]
+
+            # add it to the list of brainglobe papers
+            if matched_keywords:
+                brainglobe_papers['id'].append(paper['corpusId'])
+                brainglobe_papers['year'].append(str(paper['year']))
+                brainglobe_papers['authors'].append([auth['name'] for auth in paper['authors']])
+                brainglobe_papers['title'].append(paper['title'])
+                brainglobe_papers['link'].append(paper['url'])
+
+                citations.append(paper['citations'])
+    logger.info(f'Found {len(brainglobe_papers["id"])} brainglobe papers')
+    logger.info('Getting papers citing our work')
+
+    for paper_citations in citations:
+        for paper in paper_citations:
+            if paper['paperId'] in citing_brainglobe['id']:
+                continue  # avoid duplicates
+            citing_brainglobe['id'].append(paper['paperId'])
+            citing_brainglobe['year'].append(str(paper['year']))
+            citing_brainglobe['title'].append(paper['title'])
+            citing_brainglobe['authors'].append([auth['name'] for auth in paper['authors']])
+            citing_brainglobe['link'].append(paper['url'])
+
+    logger.info(f'Found {len(citing_brainglobe["id"])} papers citing brainglobe')            
+
+    return {**brainglobe_papers, **citing_brainglobe}
 
 
 def print_citations(citations):
@@ -33,11 +94,11 @@ def print_citations(citations):
     tb.add_column('Title', style=blue_light)
     tb.add_column('Authors')
 
-    for entry in citations:
+    for n in range(len(citations['id'])):
         tb.add_row(
-            entry['bib']['pub_year'],
-            entry['bib']['title'],
-            ' '.join(entry['bib']['author'])
+            citations['year'][n],
+            citations['title'][n],
+            ', '.join(citations['authors'][n]),
         )
 
     print(tb)
@@ -62,21 +123,20 @@ title: "References"
     """)
     mdFile.new_header(level=1, title='Papers citing cellfinder ')
     
-    years = sorted(set([paper['bib']['pub_year'] for paper in citations]))
-    for year in years:
-        mdFile.new_header(level=2, title=year)
+    years = sorted(set(citations['year']))
+    for adding_year in years:
+        mdFile.new_header(level=2, title=adding_year)
 
         # add papers
-        for paper in citations:
-            if paper['bib']['pub_year'] != year:
+        for n in range(len(citations['id'])):
+            year = citations['year'][n]
+            link = citations['link'][n]
+
+            if year != adding_year:
                 continue
 
-            if 'eprint_url' not in paper.keys():
-                link = paper['url_scholarbib']
-            else:
-                link = paper['eprint_url']
             mdFile.new_header(level=3, title=
-                mdFile.new_inline_link(link=link, text=paper['bib']['title'])
+                mdFile.new_inline_link(link=link, text=citations['title'][n])
             )
 
     # add 'in the press'
