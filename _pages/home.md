@@ -25,4 +25,4 @@ with the scientific, and open-source community (e.g. by organising hackathons).
 
 The BrainGlobe project is generously supported by the Sainsbury Wellcome Centre, with funding from Wellcome and the Gatsby Charitable Foundation.
 
-<img src='https://brainglobe.info/images/SWC.png' width="200">
+<img src='https://brainglobe.info/images/SWC.png' width="350">
