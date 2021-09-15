@@ -21,3 +21,8 @@ with the scientific, and open-source community (e.g. by organising hackathons).
 
 
 <img src='https://brainglobe.info/images/cellfinder_brainrender.png' width="800">
+
+
+The BrainGlobe project is generously supported by the Sainsbury Wellcome Centre, with funding from Wellcome and the Gatsby Charitable Foundation.
+
+<img src='https://brainglobe.info/images/SWC.png' width="200">
