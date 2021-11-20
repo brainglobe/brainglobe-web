@@ -23,5 +23,11 @@ with the scientific, and open-source community (e.g. by organising hackathons).
 <img src='https://brainglobe.info/images/cellfinder_brainrender.png' width="800">
 
 
-The BrainGlobe project is generously supported by the Sainsbury Wellcome Centre and the Institute of Neuroscience, Technical University of Munich, with funding from Wellcome, the Gatsby Charitable Foundation and the Munich Cluster for Systems Neurology - Synergy.
-<img src='https://brainglobe.info/images/SWC.png' width="350"> <img src='https://brainglobe.info/images/TUM.png' width="350">
+The BrainGlobe project is generously supported by the Sainsbury Wellcome Centre and the Institute of Neuroscience, Technical University of Munich, with funding from the Chan Zuckerberg Initiative, Wellcome, the Gatsby Charitable Foundation and the Munich Cluster for Systems Neurology - Synergy.
+<p>
+<img src='https://brainglobe.info/images/SWC.png' width="350">
+</p><p>
+<img src='https://brainglobe.info/images/TUM.png' width="350">
+</p><p>
+<img src='https://brainglobe.info/images/CZI.png' width="350">
+</p>
