@@ -12,6 +12,8 @@ main:
     url: /media
   - title: "atlas API"
     url: /atlas-api
+  - title: "brainreg"
+    url: /brainreg
   - title: "cellfinder"
     url: /cellfinder
   - title: "brainrender"

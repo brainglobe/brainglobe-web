@@ -69,10 +69,10 @@ disributions. *(Example to come)*
 
 For more detailed instructions, see the
 [documentation](https://docs.brainglobe.info/cellfinder/) or
-[ask a question](https://forum.image.sc/tag/brainglobe)
+[ask a question](https://forum.image.sc/tag/brainglobe).
 
 ### Contributing
 
 We're interested in supporting as many applications as possible. If you have ideas, or want to contribute please
 [get in touch](https://forum.image.sc/tag/brainglobe) or raise an issue on the
-[GitHub repository](https://github.com/brainglobe/cellfinder)
+[GitHub repository](https://github.com/brainglobe/cellfinder).
